@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewGoal.css';
 
-export default function NewGoal() {
+export default function NewGoal(props) {
 
   const addGoalHandler = event => {
     event.preventDefault();
@@ -11,7 +11,7 @@ export default function NewGoal() {
       text: "My new goal!"
     }
 
-    console.log(newGoal);
+    props.onAddGoal(newGoal);
   }
 
   return (
